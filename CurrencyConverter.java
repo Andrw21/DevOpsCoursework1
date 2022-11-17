@@ -23,3 +23,4 @@ System.out.println(amount + " Euros = " + f.format(pound) + " Pounds"); break;
 }
 System.out.println("Thank you for using the converter."); }
 }
+
