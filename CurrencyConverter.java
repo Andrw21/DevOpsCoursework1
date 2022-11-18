@@ -1,17 +1,20 @@
-import java.util.*;
+
 import java.text.DecimalFormat;
 
 public class CurrencyConverter {
 
     public static void main(String[] args) {
     
-        double amount, dollar, pound, code, euro; 
+        double amount; 
+        double dollar;
+        double pound;
+        double euro;
 
         DecimalFormat f = new DecimalFormat("##.##");
 
         amount = Integer.parseInt(args[0]); 
         String currency = args[1];
-
+        currency = currency.toLowerCase();
         // For amounts Conversion 
         switch (currency){
         case "dollars" :
@@ -24,7 +27,7 @@ public class CurrencyConverter {
         break;
       case "pounds":
         // For Pound Conversion
-        dollar = amount + 1.36;
+        dollar = amount * 1.36;
         System.out.println(amount + " Pounds = " + f.format(dollar) + " Dollars"); 
         euro = amount * 1.19;
         System.out.println(amount + " Pound = " + f.format(euro) + " Euros");
